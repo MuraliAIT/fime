@@ -1,0 +1,30 @@
+/* Header styles */
+header {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+header div img {
+    width: 100%;
+}
+
+header {
+    width: 75%;
+    margin: 0 auto;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    font-size: 28px;
+}
+
+header ul {
+    list-style: none;
+    padding-top: 35px;
+}
