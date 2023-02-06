@@ -9,7 +9,7 @@ import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
-  {path:'services/:id' , component:ServicesComponent},
+  {path:'services/:id/' , component:ServicesComponent},
   {path:'prodcuts' , component:ProductsComponent},
   {path:'clients' , component:ClientsComponent},
   {path:'contact' , component:ContactComponent}
