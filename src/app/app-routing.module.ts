@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ContactComponent } from './contact/contact.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
@@ -16,6 +17,9 @@ const routes: Routes = [
   children: [
     { path: 'detail/:id', component: ProductdetailsComponent }
  ]
+  },
+  {
+    path:"databinding", component: DatabindingComponent
   },
   {path:'clients' , component:ClientsComponent},
   {path:'contact' , component:ContactComponent},

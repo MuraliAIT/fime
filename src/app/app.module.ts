@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ErrorComponent } from './error/error.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ErrorComponent } from './error/error.component';
     ContactComponent,
     HomeComponent,
     ProductdetailsComponent,
-    ErrorComponent
+    ErrorComponent,
+    DatabindingComponent
   ],
   imports: [
     BrowserModule,

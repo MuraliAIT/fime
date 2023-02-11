@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{heading}}</h1>
+        </div>
+        <div class="col-md-6">
+            <p>{{defination}}</p>
+            <ol>
+                <li *ngFor="let type of typesOfDataBinding">
+                    {{type}}
+                </li>
+            </ol>
+            <table class="table">
+                <thead>
+                  <tr [class.bgDanger]="isDanger">
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr [ngClass]="isDanger?'bg-primary':'bg-danger'">
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                    <td [attr.rowspan]='rowspan'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                    <!-- <td>Active</td> -->
+                  </tr>
+                  <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                    <!-- <td>Active</td> -->
+                  </tr>
+                  <tr>
+                    <td [attr.colspan]="colspan" align="center" [style.font-weight]="isBold?'bold':'200'">Designed By <b (click)="welcome('Welcome')">Murali P</b></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col-md-6">
+            <!-- <img src="../../assets/imgs/{{imgPath}}" alt="Databinding"/> -->
+            <img [src]="imgPath" alt="Databinding" class="w-100"/>
+            <input type="text" placeholder="Enter Your name" [(ngModel)]='name' value={{name}}/>
+            <p>{{name}}</p>
+        </div>
+    </div>
+</div>
