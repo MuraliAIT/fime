@@ -13,6 +13,8 @@ import { ClientsComponent } from './clients/clients.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     ClientsComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ProductdetailsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
