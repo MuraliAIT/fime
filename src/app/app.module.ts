@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ErrorComponent } from './error/error.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { AlterBackgroundDirective } from './alter-background.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
     HomeComponent,
     ProductdetailsComponent,
     ErrorComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    AlterBackgroundDirective
   ],
   imports: [
     BrowserModule,

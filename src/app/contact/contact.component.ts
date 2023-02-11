@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+  model:any;
+  submitted:boolean;
+  constructor() {
+    this.submitted = false;
+    this.model = {};
+   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit():void{
+    console.log(this.model);
   }
 
 }
