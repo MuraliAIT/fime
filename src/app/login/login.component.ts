@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
-
+import {startWithCapitalLetter} from '../validators/custom-validators'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   submitted:boolean;
   constructor(private formBuilder: FormBuilder) { 
     this.loginForm = this.formBuilder.group({
-      email:["",Validators.required],
+      email:["",[Validators.required,startWithCapitalLetter]],
       pwd:["",[Validators.required,Validators.minLength(8),Validators.maxLength(12)]]
     });
     this.submitted = false;

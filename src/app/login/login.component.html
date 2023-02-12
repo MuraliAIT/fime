@@ -10,6 +10,9 @@
                         <div *ngIf="f['email'].errors?.['required']" class="text-danger">
                             Email field shouldn't be Empty!
                         </div>
+                        <div *ngIf="f['email'].errors?.['capValid']" class="text-danger">
+                            Email mustn't start with Capital Letter!
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
