@@ -6,7 +6,7 @@
                   <label for="email" class="form-label">Email:</label>
                   <input 
                         type="email" 
-                        class="form-control" 
+                        class="form-control"
                         id="email" 
                         placeholder="Enter email" 
                         name="email"
@@ -19,8 +19,48 @@
                         </div>
                 </div>
                 <div class="mb-3">
-                  <label for="pwd" class="form-label">Password:</label>
-                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                  <label for="fname" class="form-label">First Name:</label>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      id="fname" 
+                      placeholder="Enter First Name" 
+                      name="fname"
+                      #fn="ngModel"
+                      [(ngModel)]="model.fn"
+                      [ngClass]="{'is-invalid':f.submitted && fn.invalid}"
+                      required
+                      minlength="8"
+                      maxlength="12"
+                      >
+                      <div *ngIf="f.submitted && fn.invalid">
+                        <div *ngIf="fn.errors?.['required']" class="text-danger">Firstname field shouldn't be empty!</div>
+                        <div *ngIf="fn.errors?.['minlength']" class="text-danger">Firstname field should be minimum of 8 characters!!</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                  <label for="lname" class="form-label">Last Name:</label>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      id="lname" 
+                      placeholder="Enter First Name" 
+                      name="fname"
+                      #ln="ngModel"
+                      [(ngModel)]="model.ln"
+                      [ngClass]="{'is-invalid':f.submitted && ln.invalid}"
+                      required
+                      minlength="8"
+                      maxlength="12"
+                      >
+                      <div *ngIf="f.submitted && ln.invalid">
+                        <div *ngIf="ln.errors?.['required']" class="text-danger">Firstname field shouldn't be empty!</div>
+                        <div *ngIf="ln.errors?.['minlength']" class="text-danger">Firstname field should be minimum of 8 characters!!</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                  <label for="msg" class="form-label">Message:</label>
+                  <textarea class="form-control"></textarea>
                 </div>
                 <div class="form-check mb-3">
                   <label class="form-check-label">

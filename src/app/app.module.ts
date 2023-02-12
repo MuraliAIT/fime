@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +13,11 @@ import { ProductsComponent } from './products/products.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ErrorComponent } from './error/error.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { AlterBackgroundDirective } from './alter-background.directive';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import { AlterBackgroundDirective } from './alter-background.directive';
     ProductdetailsComponent,
     ErrorComponent,
     DatabindingComponent,
-    AlterBackgroundDirective
+    AlterBackgroundDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
