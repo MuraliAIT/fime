@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import { ChildtoparentComponent } from '../childtoparent/childtoparent.component';
 
 @Component({
   selector: 'app-products',
@@ -9,6 +10,8 @@ export class ProductsComponent implements OnInit {
   crickters:any;
   products:any;
   title:any;
+  @ViewChild(ChildtoparentComponent, { static: true })
+  child!: ChildtoparentComponent;
   constructor() {
     this.crickters = ['Virat','Rohit','Jadeja'];
     this.products = [
@@ -44,6 +47,7 @@ export class ProductsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    console.log(this.child.name); 
   }
   onChange(value:any): void{
     this.title = value;
