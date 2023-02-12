@@ -18,6 +18,8 @@ import { ErrorComponent } from './error/error.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { AlterBackgroundDirective } from './alter-background.directive';
 import { LoginComponent } from './login/login.component';
+import { ParenttochildComponent } from './parenttochild/parenttochild.component';
+import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { LoginComponent } from './login/login.component';
     ErrorComponent,
     DatabindingComponent,
     AlterBackgroundDirective,
-    LoginComponent
+    LoginComponent,
+    ParenttochildComponent,
+    ChildtoparentComponent
   ],
   imports: [
     BrowserModule,
