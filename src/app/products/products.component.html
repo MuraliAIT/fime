@@ -1,5 +1,5 @@
 <a [routerLink]="['detail',2]">{{'MacBook Air'}} </a>
 <router-outlet></router-outlet>
 <app-parenttochild [products]="products"></app-parenttochild>
-<app-childtoparent (title)="onChange($event)"></app-childtoparent>
+<app-childtoparent #cp (title)="onChange($event)"></app-childtoparent>
 <p>{{title}}</p>
