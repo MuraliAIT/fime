@@ -7,7 +7,8 @@ UserService
   styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnInit {
-  users:any;
+  users:any=[];
+  errorMessage:any="";
   constructor(private us:UserService) { }
 
   ngOnInit(): void {
@@ -15,6 +16,13 @@ export class ClientsComponent implements OnInit {
       (response)=>{
         this.users = response;
         console.log(this.users)
+      },
+      (error)=>{
+        this.errorMessage = error;
+        console.log(this.errorMessage);
+      },
+      () =>{
+        console.log("My request is completed");
       }
     )
   }

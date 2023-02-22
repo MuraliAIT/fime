@@ -11,14 +11,21 @@
                         <th>Phone</th>
                         <th>website</th>
                     </tr>
-                    <tr *ngFor="let user of users;let i=index;">
-                        <td>{{i+1}}</td>
-                        <td>{{user.name}}</td>
-                        <td>{{user.username}}</td>
-                        <td>{{user.email}}</td>
-                        <td>{{user.phone}}</td>
-                        <td>{{user.website}}</td>
-                    </tr>
+                    <tbody *ngIf="users.length>0">
+                        <tr *ngFor="let user of users;let i=index;">
+                            <td>{{i+1}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.website}}</td>
+                        </tr>
+                    </tbody>
+                    <tbody *ngIf="users.length==0">
+                        <tr>
+                            <td colspan="6">There is an error! {{errorMessage.message}}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
