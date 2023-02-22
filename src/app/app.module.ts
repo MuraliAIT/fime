@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { AlterBackgroundDirective } from './alter-background.directive';
 import { LoginComponent } from './login/login.component';
 import { ParenttochildComponent } from './parenttochild/parenttochild.component';
 import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
+import { ProductService } from './api/product.service';
 
 @NgModule({
   declarations: [
@@ -45,9 +47,10 @@ import { ChildtoparentComponent } from './childtoparent/childtoparent.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
+import { ProductService } from '../api/product.service';
 import { ChildtoparentComponent } from '../childtoparent/childtoparent.component';
+import Product from '../models/product';
 
 @Component({
   selector: 'app-products',
@@ -9,6 +11,8 @@ import { ChildtoparentComponent } from '../childtoparent/childtoparent.component
 export class ProductsComponent implements OnInit {
   crickters:any;
   products:any;
+  apiProducts: Product[] = [];
+  ps;
   title:any;
   @ViewChild(ChildtoparentComponent, { static: true })
   child!: ChildtoparentComponent;
@@ -44,10 +48,14 @@ export class ProductsComponent implements OnInit {
         dicountedPrice:23456
       }
     ]
+
+    this.ps = new ProductService();
    }
 
   ngOnInit(): void {
     console.log(this.child.name); 
+    this.apiProducts = this.ps.getAllProducts()
+    console.log(this.apiProducts)
   }
   onChange(value:any): void{
     this.title = value;

@@ -1,1 +1,26 @@
-<p>clients works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Sno</th>
+                        <th>Name</th>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>website</th>
+                    </tr>
+                    <tr *ngFor="let user of users;let i=index;">
+                        <td>{{i+1}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.website}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

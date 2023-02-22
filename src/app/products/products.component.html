@@ -3,3 +3,32 @@
 <app-parenttochild [products]="products"></app-parenttochild>
 <app-childtoparent #cp (title)="onChange($event)"></app-childtoparent>
 <p>{{title}}</p>
+
+<div class="jumbtron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <table>
+                        <tr>
+                            <th>Sno</th>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Original Price</th>
+                            <th>Discounted Price</th>
+                        </tr>
+                        <tr *ngFor="let apiProduct of apiProducts;let i=index;">
+                            <td>{{i+1}}</td>
+                            <td>{{apiProduct.name}}</td>
+                            <td>{{apiProduct.imgName}}</td>
+                            <td>{{apiProduct.desc}}</td>
+                            <td>{{apiProduct.originalPrice}}</td>
+                            <td>{{apiProduct.dicountedPrice}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
